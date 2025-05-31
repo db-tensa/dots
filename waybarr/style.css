@@ -1,0 +1,121 @@
+* {
+  font-size: 14px;
+  min-height: 0;
+  border-radius: 0;
+  padding: 0.1rem;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+tooltip {
+  background: #000000;
+}
+tooltip label {
+  color: white;
+}
+
+#custom-launcher,
+#custom-file,
+#custom-edit,
+#custom-view,
+#clock#date,
+#custom-help {
+  padding: 0 10px;
+  background: transparent;
+  color: white;
+}
+
+#custom-cava_mviz {
+  padding: 0 10px;
+  color: #FFFFFF;
+  transition: all .3s ease;
+}
+
+#custom-launcher:hover,
+#custom-file:hover,
+#custom-edit:hover,
+#custom-view:hover,
+#custom-help:hover {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+#tray,
+#clock,
+#playerctl,
+#network,
+#temperature {
+  padding: 0 10px;
+  margin: 0 2px;
+  color: white;
+}
+
+#playerctl {
+  font-size: 16px;
+}
+
+#network {
+  font-size: 14px;
+}
+
+#temperature#cpu,
+#temperature#gpu {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#temperature.critical {
+  color: #eb4d4b;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#pulseaudio {
+  font-size: 14px;
+}
+
+#pulseaudio.muted {
+  color: #eb4d4b;
+}
+
+#workspaces {
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: rgba(255, 255, 255, 0.9);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#workspaces button.active {
+  background: rgba(0, 255, 255, 0.3);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+#workspaces button.empty {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#workspaces button.empty:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.4);
+}

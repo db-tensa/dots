@@ -1,0 +1,149 @@
+[
+  {
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 5,
+    "modules-left": [
+      "custom/launcher",
+      "custom/file",
+      "custom/edit",
+      "custom/view",
+      "custom/help",
+      "tray",
+      "hyprland/window"
+    ],
+    "modules-center": [
+      "custom/cava_mviz"
+    ],
+    "modules-right": [
+      "temperature#cpu",
+      "temperature#gpu",
+      "hyprland/workspaces",
+      "network",
+      "pulseaudio",
+      "clock#date",
+      "clock"
+    ],
+    "custom/launcher": {
+      "format": " Finder",
+      "on-click": "wofi --show drun",
+      "tooltip": false
+    },
+    "clock#date": {
+      "format": "{:%d %a %b}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/file": {
+      "exec": "echo 'File'",
+      "interval": 60,
+      "return-type": "plain",
+      "on-click": "nautilus"
+    },
+    "custom/edit": {
+      "exec": "echo 'Edit'",
+      "interval": 60,
+      "return-type": "plain",
+      "on-click": "gimp"
+    },
+    "custom/view": {
+      "exec": "echo 'View'",
+      "interval": 60,
+      "return-type": "plain"
+    },
+    "custom/help": {
+      "exec": "echo 'Help'",
+      "interval": 60,
+      "return-type": "plain",
+      "on-click": "gio open https://github.com/kamlendras/waybar/issues/new"
+    },
+    "tray": {
+      "spacing": 5
+    },
+    "custom/cava_mviz": {
+      "exec": "$HOME/.config/hypr/scripts/WaybarCava.sh",
+      "format": "{}",
+      "interval": 0.1  /* Убрана лишняя кавычка */
+    },
+    "clock": {
+      "format": "{:%H:%M}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "network": {
+      "format-wifi": " {signalStrength}%",
+      "format-ethernet": "   {ifname}",
+      "format-disconnected": "󰖪 Disconnected",
+      "tooltip-format": "Connected to {essid} ({signalStrength}%)"
+    },
+    "temperature#cpu": {
+      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      "format": "󰢮   {temperatureC}°C",
+      "critical-threshold": 80,
+      "format-critical": "{temperatureC}°C ⚠"
+    },
+    "temperature#gpu": {
+      "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+      "format": "󰻠   {temperatureC}°C",
+      "critical-threshold": 85,
+      "format-critical": "{temperatureC}°C ⚠"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format-icons": {
+        "active": "<span class='active'>{}</span>",
+        "default": "{}",
+        "empty": "{}"
+      },
+      "persistent-workspaces": {
+        "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      }
+    },
+    "pulseaudio": {
+      "scroll-step": 5,
+      "format": "{icon}  {volume}%",
+      "format-muted": "󰝟  Muted",
+      "format-icons": {
+        "default": ["󰕿 ", "󰖀 ", "󰕾 "]
+      },
+      "on-click": "pavucontrol"
+    },
+    "hyprland/window": {
+      "format": "{title}",
+      "max-length": 50,
+      "rewrite": {
+        "^(?!.*\\S).*": "Desktop"
+      }
+    }
+  },
+  {
+    "layer": "top",
+    "position": "bottom",
+    "height": 41,
+    "width": 2,
+    "modules-left": [
+      "custom/os_button"
+    ],
+    "modules-center": [
+      "sway/mode",
+      "wlr/taskbar"
+    ],
+    "margin": "4",
+    "spacing": "5",
+    "sway/window": {
+      "max-length": 50
+    },
+    "custom/os_button": {
+      "on-click": "wofi --show drun",
+      "tooltip": false
+    },
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-size": 36,
+      "spacing": 3,
+      "on-click-middle": "close",
+      "tooltip-format": "{title}",
+      "ignore-list": [],
+      "on-click": "activate"
+    }
+  }
+]
