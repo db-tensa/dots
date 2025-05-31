@@ -1,0 +1,9 @@
+[20:51:14 2025-05-06] FETCHING Version 2.40.6
+[20:51:14 2025-05-06] CREATING /home/tensa/.spicetify
+[20:51:14 2025-05-06] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.40.6/spicetify-2.40.6-linux-amd64.tar.gz
+[20:51:16 2025-05-06] EXTRACTING /home/tensa/.spicetify/spicetify.tar.gz
+[20:51:16 2025-05-06] SETTING EXECUTABLE PERMISSIONS TO /home/tensa/.spicetify/spicetify
+[20:51:16 2025-05-06] REMOVING /home/tensa/.spicetify/spicetify.tar.gz
+[20:51:16 2025-05-06] APPENDING /home/tensa/.spicetify to PATH in /home/tensa/.config/fish/config.fish
+[20:51:16 2025-05-06] spicetify v2.40.6 was installed successfully to /home/tensa/.spicetify
+[20:51:16 2025-05-06] Run 'spicetify --help' to get started

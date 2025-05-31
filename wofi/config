@@ -1,0 +1,13 @@
+[config]
+allow_images=true
+width=900
+show=drun
+prompt=Search
+height=400
+term=foot
+hide_scroll=false
+print_command=true
+insensitive=true
+columns=2
+no_actions=true
+
